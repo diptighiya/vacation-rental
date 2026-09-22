@@ -17,3 +17,11 @@ spring:
 
 server:
   port: ${PORT:8080}
+
+# Used by the seed profile (issue #3). The admin password is never committed:
+# set SEED_ADMIN_PASSWORD, or leave it empty and the seeder prints a generated one.
+seed:
+  admin-email: ${SEED_ADMIN_EMAIL:admin@stayfinder.dev}
+  admin-password: ${SEED_ADMIN_PASSWORD:}
+  demo-password: ${SEED_DEMO_PASSWORD:demo1234}
+  reset: ${SEED_RESET:false}

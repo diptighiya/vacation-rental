@@ -1,0 +1,5 @@
+# ./mvnw spring-boot:run -Dspring-boot.run.profiles=seed
+# Applies migrations, loads the seed data (see SeedRunner), then exits.
+spring:
+  main:
+    web-application-type: none

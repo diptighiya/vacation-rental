@@ -10,7 +10,7 @@ import org.springframework.test.context.DynamicPropertySource;
 /** Boots the app against a throwaway PostgreSQL, so Flyway and Hibernate run against the
  *  real engine (exclusion constraints, gen_random_uuid) without needing Docker. One server
  *  is shared by every test class in the run. */
-@SpringBootTest
+@SpringBootTest(properties = "seed.admin-password=test-admin-password")
 public abstract class PostgresTest {
 
     private static final EmbeddedPostgres POSTGRES = start();

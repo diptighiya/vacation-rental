@@ -1,0 +1,15 @@
+# Local PostgreSQL for development: docker compose up -d
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: stayfinder
+      POSTGRES_USER: stayfinder
+      POSTGRES_PASSWORD: stayfinder
+    ports:
+      - "5432:5432"
+    volumes:
+      - stayfinder-db:/var/lib/postgresql/data
+
+volumes:
+  stayfinder-db:

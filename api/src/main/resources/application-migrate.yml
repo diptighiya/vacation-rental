@@ -1,0 +1,5 @@
+# ./mvnw spring-boot:run -Dspring-boot.run.profiles=migrate
+# Applies pending Flyway migrations, checks the entities against the schema, then exits.
+spring:
+  main:
+    web-application-type: none

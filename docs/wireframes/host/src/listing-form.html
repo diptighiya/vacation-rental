@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>Wireframe: Add / edit listing</title>
+<link rel="stylesheet" href="wireframe.css">
+<style>
+  .section { border: 1.5px solid var(--line); border-radius: 10px; padding: 20px 22px; }
+  .section h3 { margin: 0; font-size: 15px; }
+  .section .sub { margin: 2px 0 14px; font-size: 13px; }
+  .counter { display: flex; align-items: center; gap: 14px; height: 36px; }
+  .counter span.b { width: 30px; height: 30px; border: 1.5px solid var(--ink); border-radius: 50%; display: grid; place-items: center; font-weight: 700; }
+  .drop { border: 2px dashed var(--ink-3); border-radius: 10px; background: var(--fill); padding: 26px; text-align: center; display: grid; gap: 6px; justify-items: center; }
+  .thumb { position: relative; border-radius: 7px; overflow: hidden; }
+  .thumb .x { position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper); border: 1.5px solid var(--ink-2); display: grid; place-items: center; font-weight: 700; }
+  .thumb .cover { position: absolute; top: 6px; left: 6px; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="sheet-title">
+    <h1>Host · 2 of 3: Add / edit listing</h1>
+    <span>StayFinder wireframes · Sprint 1 · issue #9 · routes /host/listings/new and /host/listings/:id/edit</span>
+  </div>
+
+  <div class="frame">
+    <div class="chrome"><i></i><i></i><i></i><div class="url">stayfinder.dev/host/listings/new</div></div>
+    <div class="nav">
+      <span class="logo">StayFinder</span>
+      <a class="on">My listings</a>
+      <a>Analytics</a>
+      <span class="me"><span class="avatar"></span>Nina P. ▾</span>
+    </div>
+
+    <div class="page grid" style="gap:20px;max-width:820px">
+      <div class="anchor">
+        <span class="pin side-l">1</span>
+        <p class="h1">Add listing</p>
+        <p class="sub">New listings are reviewed by an admin before guests can see them.</p>
+      </div>
+
+      <!-- Basics -->
+      <div class="section anchor">
+        <span class="pin">2</span>
+        <h3>Basics</h3>
+        <p class="sub">What guests see first in search results.</p>
+        <div class="grid">
+          <div class="field"><label>Title *</label><div class="input">Sunlit craftsman near Santana Row</div></div>
+          <div class="field"><label>Description *</label><div class="input area">Three-bedroom home with a garden patio, ten minutes from downtown.</div><span class="muted">0 characters</span></div>
+          <div class="grid" style="grid-template-columns:1fr 1fr">
+            <div class="field"><label>Price per night (USD) *</label><div class="input error">0</div><span class="err">Enter a nightly price above $0</span></div>
+            <div class="field"><label>Max guests</label><div class="counter"><span class="b">–</span><b>2</b><span class="b">+</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="section anchor">
+        <span class="pin">3</span>
+        <h3>Address</h3>
+        <p class="sub">Only the city and ZIP are shown publicly until a booking is confirmed.</p>
+        <div class="grid">
+          <div class="field"><label>Street address *</label><div class="input">218 Bird Ave</div></div>
+          <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+            <div class="field"><label>City *</label><div class="input">San Jose</div></div>
+            <div class="field"><label>State</label><div class="input select">CA</div></div>
+            <div class="field"><label>ZIP code *</label><div class="input">95126</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Amenities -->
+      <div class="section anchor">
+        <span class="pin">4</span>
+        <h3>Amenities</h3>
+        <p class="sub">Guests filter on these, so only tick what you actually provide.</p>
+        <div class="row" style="flex-wrap:wrap;gap:8px">
+          <span class="chip on">Wifi</span><span class="chip on">Kitchen</span><span class="chip on">Free parking</span>
+          <span class="chip">Washer</span><span class="chip">Dryer</span><span class="chip on">Hot tub</span><span class="chip">Pool</span>
+          <span class="chip">Fireplace</span><span class="chip on">Air conditioning</span><span class="chip">Pets allowed</span>
+          <span class="chip">Beach access</span><span class="chip">Gym</span><span class="chip">Elevator</span>
+        </div>
+      </div>
+
+      <!-- Photos -->
+      <div class="section anchor">
+        <span class="pin">5</span>
+        <h3>Photos</h3>
+        <p class="sub">The first photo is the cover image shown in search.</p>
+        <div class="drop">
+          <span>Drag photos here</span>
+          <span class="muted">JPG or PNG, up to 10 per listing</span>
+          <span class="btn secondary sm">Choose a file</span>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px">
+          <div class="thumb"><div class="img" style="height:120px"></div><span class="badge solid cover">Cover</span><span class="x">×</span></div>
+          <div class="thumb"><div class="img" style="height:120px"></div><span class="x">×</span></div>
+          <div class="thumb"><div class="img" style="height:120px"></div><span class="x">×</span></div>
+        </div>
+      </div>
+
+      <!-- Availability -->
+      <div class="section anchor">
+        <span class="pin">6</span>
+        <h3>Availability</h3>
+        <p class="sub">Add the date ranges the place can be booked.</p>
+        <div class="grid">
+          <div class="row" style="align-items:flex-end">
+            <div class="field" style="width:220px"><label>Check-in</label><div class="input">10/01/2026<span class="cal">▦</span></div></div>
+            <div class="field" style="width:220px"><label>Check-out</label><div class="input">12/20/2026<span class="cal">▦</span></div></div>
+            <span class="link" style="padding-bottom:8px">Remove</span>
+          </div>
+          <div class="row" style="align-items:flex-end">
+            <div class="field" style="width:220px"><label>Check-in</label><div class="input">01/05/2027<span class="cal">▦</span></div></div>
+            <div class="field" style="width:220px"><label>Check-out</label><div class="input">03/31/2027<span class="cal">▦</span></div></div>
+            <span class="link" style="padding-bottom:8px">Remove</span>
+          </div>
+          <div><span class="btn secondary sm">Add another range</span></div>
+          <div class="grid" style="grid-template-columns:1fr 1fr">
+            <div class="field"><label>Check-in time</label><div class="input select">15:00</div></div>
+            <div class="field"><label>Check-out time</label><div class="input select">11:00</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row anchor" style="justify-content:flex-end">
+        <span class="pin" style="left:auto;right:215px">7</span>
+        <span class="btn secondary">Cancel</span><span class="btn">Create listing</span>
+      </div>
+    </div>
+  </div>
+
+  <aside class="notes">
+    <h2>Notes</h2>
+    <div class="meta">Issues #19 (add), #21 (details, hours, availability), #22 (description, photos, amenities)</div>
+    <ol>
+      <li><span class="pin">1</span><span><b>One form, two routes</b>/new says "Add listing" and "Create listing". /:id/edit pre-fills the fields and says "Edit listing" and "Save changes". Saving an edit sends the listing back to admin review.</span></li>
+      <li><span class="pin">2</span><span><b>Basics</b>Title ≥ 8 characters. Description ≥ 30 characters, with a live character count. Price > $0 and ≤ $10,000. Max guests 1 to 16. Errors show inline under each field, using the same rules as the API contract.</span></li>
+      <li><span class="pin">3</span><span><b>Address</b>ZIP is 5 digits. The server geocodes the address to lat/lng, and a changed address is re-geocoded (#21).</span></li>
+      <li><span class="pin">4</span><span><b>Amenities</b>Chosen from the predefined list (the amenities table), shown as toggle chips.</span></li>
+      <li><span class="pin">5</span><span><b>Photos</b>Drag and drop or pick files, JPG/PNG only, up to 10. The first photo is the cover, and × deletes one. Reordering to pick a new cover is proposed in the contract (PUT …/photos/order). At least one photo is required.</span></li>
+      <li><span class="pin">6</span><span><b>Availability</b>One or more date ranges, and dates outside them are blocked from search. House hours are set with the check-in and check-out time pickers.</span></li>
+      <li><span class="pin">7</span><span><b>Submit</b>Validates the whole form, then saves and returns to My listings with the toast "Listing saved — pending admin approval". Cancel goes back without saving.</span></li>
+    </ol>
+    <div class="foot">Server errors come back as <code>{ error: { code, message, fields } }</code>. Field messages go under their inputs, and anything else shows in a toast.</div>
+  </aside>
+</div>
+</body>
+</html>

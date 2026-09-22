@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<title>Wireframe: My listings</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+<div class="sheet">
+  <div class="sheet-title">
+    <h1>Host · 1 of 3: My listings</h1>
+    <span>StayFinder wireframes · Sprint 1 · issue #9 · route /host/listings</span>
+  </div>
+
+  <div class="frame">
+    <div class="chrome"><i></i><i></i><i></i><div class="url">stayfinder.dev/host/listings</div></div>
+    <div class="nav">
+      <span class="logo">StayFinder</span>
+      <a class="on">My listings</a>
+      <a class="anchor">Analytics<span class="pin side-r">6</span></a>
+      <span class="me"><span class="avatar"></span>Nina P. ▾</span>
+    </div>
+
+    <div class="page grid" style="gap:22px">
+      <div class="row between" style="align-items:flex-start">
+        <div>
+          <p class="h1">My listings</p>
+          <p class="sub">Everything you host. New and edited listings go back to admin review before they appear in search.</p>
+        </div>
+        <span class="btn anchor"><span class="pin">1</span>Add listing</span>
+      </div>
+
+      <div class="grid anchor" style="grid-template-columns:repeat(4,1fr)">
+        <span class="pin">2</span>
+        <div class="card pad tile"><div class="label">Total listings</div><div class="value">9</div></div>
+        <div class="card pad tile"><div class="label">Approved</div><div class="value">7</div><div class="muted">Live in search</div></div>
+        <div class="card pad tile"><div class="label">Pending review</div><div class="value">1</div><div class="muted">Waiting on an admin</div></div>
+        <div class="card pad tile"><div class="label">Bookings this month</div><div class="value">42</div></div>
+      </div>
+
+      <div class="card anchor" style="overflow:visible">
+        <span class="pin">3</span>
+        <table>
+          <thead>
+            <tr>
+              <th class="sorted">Listing</th>
+              <th class="sort">Location</th>
+              <th class="sort r">Price / night</th>
+              <th class="sort r">Max guests</th>
+              <th class="sort anchor">Status<span class="pin" style="left:auto;right:-14px">4</span></th>
+              <th class="sort r">Bookings</th>
+              <th class="r">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Airy modern townhouse in the Westside</span></div></td><td>Santa Cruz, CA 95060</td><td class="r">$222</td><td class="r">6</td><td><span class="badge solid">Approved</span></td><td class="r">6</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="link">Remove</span></td></tr>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Bright mid-century ranch in Rose Garden</span></div></td><td>San Jose, CA 95126</td><td class="r">$335</td><td class="r">6</td><td><span class="badge solid">Approved</span></td><td class="r">5</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="link">Remove</span></td></tr>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Cozy adobe casita in Venice</span></div></td><td>Los Angeles, CA 90291</td><td class="r">$142</td><td class="r">3</td><td><span class="badge solid">Approved</span></td><td class="r">7</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="link">Remove</span></td></tr>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Quiet studio loft in Buckman</span></div></td><td>Portland, OR 97214</td><td class="r">$118</td><td class="r">2</td><td><span class="badge">Pending</span></td><td class="r">0</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="link">Remove</span></td></tr>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Updated Victorian flat in Uptown Sedona</span></div></td><td>Sedona, AZ 86336</td><td class="r">$206</td><td class="r">4</td><td><span class="badge solid">Approved</span></td><td class="r">4</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="link">Remove</span></td></tr>
+            <tr><td><div class="row"><div class="img" style="width:48px;height:48px;border-radius:6px"></div><span class="link">Charming family home in Seabright</span></div></td><td>Santa Cruz, CA 95062</td><td class="r">$373</td><td class="r">8</td><td><span class="badge dashed">Removed</span></td><td class="r">0</td><td class="r"><span class="link">Edit</span> &nbsp; <span class="muted">Remove</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Remove confirmation, shown inline so it fits on one sheet -->
+      <div class="row" style="justify-content:center">
+        <div class="card anchor" style="width:460px;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--fill-2)">
+          <span class="pin">5</span>
+          <div class="pad grid" style="gap:10px">
+            <b style="font-size:16px">Remove this listing?</b>
+            <span class="sub" style="margin:0">"Cozy adobe casita in Venice" will stop appearing in search. Existing bookings are not cancelled.</span>
+            <div class="row" style="justify-content:flex-end"><span class="btn secondary">Cancel</span><span class="btn">Remove listing</span></div>
+          </div>
+        </div>
+      </div>
+      <p class="muted" style="text-align:center;margin-top:-10px">Remove dialog (opens over the page, shown here below the table)</p>
+    </div>
+  </div>
+
+  <aside class="notes">
+    <h2>Notes</h2>
+    <div class="meta">Issues #20 (view), #23 (remove) · Data: GET /api/host/listings</div>
+    <ol>
+      <li><span class="pin">1</span><span><b>Add listing</b>Opens the listing form (/host/listings/new). The new listing is saved as Pending.</span></li>
+      <li><span class="pin">2</span><span><b>Stat tiles</b>Counted from the same list as the table: total, approved (live), pending review, and confirmed bookings this calendar month.</span></li>
+      <li><span class="pin">3</span><span><b>Table</b>Shows only this host's listings. Click a header to sort. Photo, price and booking count are on every row (#20 AC). The title links to the public detail page.</span></li>
+      <li><span class="pin">4</span><span><b>Status badge</b>Approved (solid), Pending (outline), Removed (dashed). A rejected or removed listing shows the admin's reason on hover.</span></li>
+      <li><span class="pin">5</span><span><b>Remove</b>Asks for confirmation first (#23), then does a soft delete. The listing leaves search, but existing bookings stay and get flagged. Remove is disabled on removed rows.</span></li>
+      <li><span class="pin">6</span><span><b>Analytics link</b>Goes to the host dashboard, which #31 requires to be linked from here.</span></li>
+    </ol>
+    <div class="foot">Empty state: "You haven't added a listing yet." with the Add listing button. Loading: skeleton rows in the table.</div>
+  </aside>
+</div>
+</body>
+</html>

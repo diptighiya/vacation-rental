@@ -67,8 +67,9 @@ public class DatabaseSeeder {
     /** Fixed so every run produces the same listings, stays and reviews. */
     private static final long RANDOM_SEED = 20260922L;
 
-    private static final Set<Integer> PENDING = Set.of(5, 13, 21, 29, 37, 45, 51);
-    private static final Set<Integer> REMOVED = Set.of(7, 20, 33, 46);
+    /** Listing i belongs to host i % 6, so 18 and 36 give the demo host (Nina) one of each. */
+    private static final Set<Integer> PENDING = Set.of(5, 13, 18, 29, 37, 45, 51);
+    private static final Set<Integer> REMOVED = Set.of(7, 20, 36, 46);
     /** Pending listings with no photos yet, for the admin "incomplete" flag (issue #25). */
     private static final Set<Integer> NO_PHOTOS = Set.of(13, 37);
     /** Pending listing whose address hasn't been geocoded. */
